@@ -6,3 +6,15 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
 authors = ["Jakob Stender Guldberg"]
+
+[dependency-groups]
+dev = [
+    "kaggle>=1.7.4.5",
+    "poethepoet>=0.36.0",
+    "pre-commit>=4.2.0",
+]
+
+[tool.poe.tasks]
+_download_files = { cmd = "kaggle competitions download -p data/ hill-of-towie-wind-turbine-power-prediction", help = "Download competition files from Kaggle" }
+_unzip = { cmd = "unzip -o data/hill-of-towie-wind-turbine-power-prediction.zip -d data/", deps = ["_download_files"], help = "Unzip the downloaded files" }
+get_files = { sequence = ["_download_files", "_unzip"], help = "Download and unzip competition files" }
