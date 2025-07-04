@@ -1,6 +1,6 @@
 # Hill of Towie Wind Turbine Power Prediction
 
-**Repository for a solution to the Kaggle competition: Hill of Towie Wind Turbine Power Prediction**
+**Repository for a solution to the Kaggle competition: [Hill of Towie Wind Turbine Power Prediction](https://www.kaggle.com/competitions/hill-of-towie-wind-turbine-power-prediction/overview)**
 
 ## Competition Overview
 
